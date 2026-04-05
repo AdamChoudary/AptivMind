@@ -14,8 +14,31 @@
 
 html,
 body {
-  font-family: 'Montserrat', sans-serif;
-  @apply text-text-1;
+  font-family: var(--font-inter), sans-serif;
+  @apply text-text-1 bg-bg-1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+// Custom Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--onyx);
+  border: 2px solid var(--bg-1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
 
 html {
@@ -49,7 +72,7 @@ a {
     height: 0.2vw;
     width: 40%;
     margin: auto;
-    background-color: #404040;
+    background-color: var(--primary);
     position: relative;
     transition: transform 0.3s;
   }

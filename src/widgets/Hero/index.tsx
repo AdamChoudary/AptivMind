@@ -26,20 +26,20 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <section id="main" className="relative bg-gradient-to-b  ">
+    <section id="main" className="relative overflow-hidden bg-[radial-gradient(circle_at_center,_var(--midnight-blue)_0%,_var(--bg-1)_100%)]">
       <div
         onMouseMove={(e) => manageMouseMove(e)}
         className="relative left-0 top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden md:h-[80vh]"
       >
         <motion.h1
           ref={heading1}
-          className="relative z-20 mt-[-5vw] w-full text-center text-[4.5vw] md:text-[6vw] md:leading-[1.2] font-extrabold text-text-1 max-w-[95%]"
+          className="relative z-20 mt-[-5vw] w-full text-center text-[5.5vw] md:text-[7vw] md:leading-[1.1] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-text-1 via-primary to-text-1 max-w-[95%] tracking-tighter"
           style={{ opacity }}
         >
-          CREATING UNIQUENESS
+          ADVANCING INTELLIGENCE.<br />SCALING POSSIBILITIES.
         </motion.h1>
-        <motion.h2 ref={heading2} className="z-20 text-[1.7vw] md:text-[3vw] font-medium text-text-1/7 5" style={{ opacity }} >
-          Creative agency from USA, Tennessee
+        <motion.h2 ref={heading2} className="z-20 mt-4 text-[1.4vw] md:text-[2.5vw] font-light text-primary/80 tracking-[0.5em] uppercase" style={{ opacity }} >
+          Specialized AI & Digital Solutions Agency
         </motion.h2>
         <div ref={ref1} className={`absolute left-0 top-0 z-10 h-full w-full`}>
           <Image src={main_1} fill={true} alt="" className='' objectFit="cover" />

@@ -21,22 +21,23 @@ const Index: FC<Props> = () => {
       document.removeEventListener("keydown", handleEscape);
     };
   }, []);
+
   return (
-    <div >
-      <div className="fixed right-0 z-[4001] p-[2vw]">
+    <div>
+      <div className="fixed right-0 z-[4001] p-[3vw]">
         <button
           type="button"
           onClick={() => setIsActive(!isActive)}
-          className="flex h-[4.5vw] w-[4.5vw] cursor-pointer items-center justify-center rounded-full bg-stone-400">
+          className={`flex h-[5vw] w-[5vw] md:h-[12vw] md:w-[12vw] cursor-pointer items-center justify-center rounded-full border border-primary/20 bg-bg-2/40 backdrop-blur-xl hover:bg-primary/10 transition-all duration-500 shadow-xl ${isActive ? 'scale-90 border-primary/50' : ''}`}
+        >
           <div className={`burger ${isActive && 'burgerActive'}`}></div>
         </button>
       </div>
-      <button title="your_agency_name" className="p-[2vw] fixed z-[100] top-0 left-0 group">
-        <LogoIcon className="w-[5vw] h-[5vw] group-hover:text-white/80 transition duration-300" />
+      <button title="AptivMind" className="p-[3vw] fixed z-[100] top-0 left-0 group">
+        <LogoIcon className="w-[6vw] h-[6vw] md:w-[15vw] md:h-[15vw] group-hover:scale-105 transition-transform duration-500" />
       </button>
-      <AnimatePresence mode="wait">{isActive && (
-        <SidebarMenu close={closeSidebar} />
-      )}
+      <AnimatePresence mode="wait">
+        {isActive && <SidebarMenu close={closeSidebar} />}
       </AnimatePresence>
     </div>
   );

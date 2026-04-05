@@ -2,10 +2,18 @@
 
 import Lenis from 'lenis';
 
-import { Montserrat } from 'next/font/google';
+import { Outfit, Inter } from 'next/font/google';
 import { useEffect, useState } from 'react';
 
-const montserrat = Montserrat({ subsets: ['latin'] });
+const outfit = Outfit({ 
+  subsets: ['latin'],
+  variable: '--font-outfit',
+});
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 import '@/shared/styles/globals.scss';
 
@@ -35,8 +43,8 @@ export default function RootLayout({
     requestAnimationFrame(raf);
   }, []);
   return (
-    <html lang="ru">
-      <body className={montserrat.className}>
+    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+      <body className="font-inter">
         <main>
           {children}
         </main>

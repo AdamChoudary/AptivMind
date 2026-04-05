@@ -11,13 +11,18 @@ const Index: FC<Props> = () => {
       <SectionOpacity classes='z-2'>
         <SectionTitle title="ABOUT." classes="px-[6vw] md:px-[3vw] pt-[3vw] z-10" />
         <div className="relative self-start px-[6vw] md:px-[3vw] pb-[5vw] pt-[3vw]">
-          <div className="flex space-x-[5vw] md:space-x-0 md:flex-col md:space-y-[3vw] md:items-center">
-            <p className="flex grow-[4] basis-0 flex-wrap text-[2.3vw] md:text-[3.8vw] md:leading-[1.3] md:text-balance md:text-center">
-              We are a young, close-knit team of like-minded people ready to help brands from USA prosper in the digital world.
+          <div className="flex gap-[8vw] md:flex-col md:gap-[5vw] md:items-center">
+            <p className="flex grow-[4] basis-0 flex-wrap text-[2vw] md:text-[3.5vw] font-light leading-[1.4] text-text-1 items-center">
+              AptivMind specializes in bridging the gap between cutting-edge AI technology and real-world business efficiency. We empower organizations through autonomous systems, bespoke web platforms, and data-driven insights that scale effortlessly.
             </p>
 
-            <div className="relative h-[20vw] w-[30vw] md:h-[40vw] md:max-w-[90%] md:text-center grow-[3] md:w-full basis-0 md:basis-[initial]  bg-bg-2">
-              <img src="/images/hands_v2.jpg" alt="hands image" className="inline-block md:object-cover rounded-[0.125vw] md:rounded-[0.25vw] hover:brightness-110 transition absolute inset-0 w-full h-full" />;
+            <div className="relative h-[25vw] w-[35vw] md:h-[50vw] md:w-full md:max-w-[100%] group grow-[3] basis-0 rounded-2xl overflow-hidden shadow-[20px_20px_60px_-15px_rgba(83,69,62,0.3)]">
+              <img 
+                src="/images/hands_v2.jpg" 
+                alt="AptivMind Teamwork" 
+                className="inline-block object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-1/80 via-transparent to-transparent opacity-60"></div>
             </div>
           </div>
         </div>

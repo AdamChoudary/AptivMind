@@ -9,6 +9,10 @@ module.exports = {
       screens: {
         md: { max: '600px' },
       },
+      fontFamily: {
+        inter: ['var(--font-inter)', 'sans-serif'],
+        outfit: ['var(--font-outfit)', 'sans-serif'],
+      },
       colors: {
         primary: '#B39F84', // Champagne
         'bg-1': '#1A1A1A', // Charcoal base instead of deep space black
