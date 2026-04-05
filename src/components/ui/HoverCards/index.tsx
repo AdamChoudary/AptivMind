@@ -51,7 +51,7 @@ const Index: FC<Props> = ({ cards, itemClasses, wrapperClasses }) => {
           >
             {/* Numbering Accent */}
             {card.number && (
-              <span className="absolute top-[2vw] right-[2vw] text-[4vw] md:text-[8vw] font-outfit font-black text-color-2/10 group-hover:text-color-2/30 transition-colors duration-700">
+              <span className="absolute top-[2vw] right-[2vw] text-[4vw] md:text-[8vw] font-outfit font-black text-moss-green/20 group-hover:text-moss-green/40 transition-colors duration-700">
                 {card.number}
               </span>
             )}

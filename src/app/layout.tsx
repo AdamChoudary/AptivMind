@@ -39,8 +39,6 @@ export default function RootLayout({
     window.addEventListener('resize', resize);
     requestAnimationFrame(raf);
     resize();
-
-    requestAnimationFrame(raf);
   }, []);
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>

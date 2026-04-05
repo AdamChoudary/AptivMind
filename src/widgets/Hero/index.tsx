@@ -26,10 +26,15 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <section id="main" className="relative overflow-hidden bg-[radial-gradient(circle_at_center,_var(--midnight-blue)_0%,_var(--bg-1)_100%)]">
+    <section id="main" className="relative h-screen w-full overflow-hidden bg-[radial-gradient(circle_at_center,var(--midnight-blue)_0%,var(--onyx)_100%)]">
+      {/* Creative Aurora Layer */}
+      <div className="absolute inset-x-0 top-0 h-[80vh] w-full pointer-events-none opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight-blue via-transparent to-transparent animate-aurora mix-blend-screen" />
+      </div>
+
       <div
         onMouseMove={(e) => manageMouseMove(e)}
-        className="relative left-0 top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden md:h-[80vh]"
+        className="relative left-0 top-0 flex h-full w-full flex-col items-center justify-center overflow-hidden md:h-[80vh]"
       >
         <motion.h1
           ref={heading1}
@@ -41,6 +46,7 @@ const Hero = () => {
         <motion.h2 ref={heading2} className="z-20 mt-4 text-[1.4vw] md:text-[2.5vw] font-light text-primary/80 tracking-[0.5em] uppercase" style={{ opacity }} >
           Specialized AI & Digital Solutions Agency
         </motion.h2>
+
         <div ref={ref1} className={`absolute left-0 top-0 z-10 h-full w-full`}>
           <Image src={main_1} fill={true} alt="" className='' objectFit="cover" />
         </div>
