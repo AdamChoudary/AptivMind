@@ -25,11 +25,11 @@ const Index: FC<Props> = ({ data, isActive, setSelectedIndicator, handleClick })
       onClick={handleClick}
     >
       <motion.div
-        className="absolute left-0 inline-block h-[0.6vw] w-[0.6vw] rounded-full bg-white"
+        className="absolute left-0 inline-block h-[0.5vw] w-[0.5vw] rounded-full bg-primary"
         variants={scale}
         animate={isActive ? 'open' : 'closed'}
       ></motion.div>
-      <div tabIndex={0} className="cursor-pointer text-[2.5vw] md:text-[3vw] leading-[1.35] md:leading-[1.25] font-semibold tracking-wide duration-200  transition-[cubic-bezier(.16,1,.3,1)] hover:translate-x-[1.6vw]">
+      <div tabIndex={0} className="cursor-pointer text-[3.2vw] md:text-[5vw] leading-[1.2] font-outfit font-bold tracking-tighter transition-all duration-300 hover:translate-x-[2vw] hover:text-primary uppercase">
         {title}
       </div>
     </motion.div>

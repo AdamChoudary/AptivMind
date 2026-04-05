@@ -73,78 +73,77 @@ export const CARDS = [
 export const APPROACH_CARDS = [
   {
     icon: First,
-    title: 'Consultation',
+    title: 'Strategic Consultation',
     description:
-      "We listen carefully to the customer's wishes and ideas about the project. Then we share our vision and, based on this exchange, come to a common agreement.",
+      'We begin by deeply analyzing your business workflows and objectives. Our experts listen to your vision to architect a roadmap that ensures technical feasibility and high ROI.',
   },
   {
     icon: Second,
-    title: 'Joint review',
+    title: 'Architectural Blueprint',
     description:
-      'Then we start creating the design. After completion, we conduct a joint review, where the customer, if desired, can make changes.',
+      'Following strategy, we develop comprehensive designs and system architectures. We conduct intensive reviews with your stakeholders to ensure the solution aligns perfectly with your goals.',
   },
   {
     icon: Third,
-    title: 'Development',
-    description: 'After the design is approved, we proceed to the actual development of the product.',
+    title: 'Precision Development',
+    description: 'Our elite engineering team proceeds to build your autonomous systems or platforms, focusing on scalability, security, and peak performance using modern technology stacks.',
   },
   {
     icon: Fourth,
-    title: 'Testing',
+    title: 'Rigorous Optimization',
     description:
-      'Once the development is complete, we thoroughly test each component of the product. Then we invite the customer for user testing.',
+      'Execution is followed by multi-layered testing. We Stress-test every component for reliability before initiating user-acceptance cycles to ensure a flawless deployment.',
   },
   {
     icon: Fifth,
-    title: 'Final result',
+    title: 'Scale & Maintenance',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates laboriosam ad eius, culpa soluta ab. Beatae optio quas adipisci aliquam quia velit soluta iste dicta, modi tenetur magnam, aut laborum placeat est. Unde minima amet illo eveniet qui sunt omnis laudantium laboriosam, officia dignissimos molestias tempore velit. Provident, explicabo. Dolor.',
+      'Deployment is just the beginning. We provide ongoing management and scaling support to ensure your AI agents and data panels grow alongside your shifting business demands.',
   },
 ];
 
 export const RADIO_FIELDS = [
   {
-    title: 'What type of services you want?',
+    title: 'Desired Service Domain',
     classes: 'mr-[2.25vw]',
     radioArray: [
-      { name: 'Design/Branding', value: 'design/branding' },
-      { name: 'Web Development', value: 'web-dev' },
-      { name: 'Mobile Development', value: 'mobile-dev' },
-      { name: 'All of the above', value: 'all-types' },
-      { name: 'Other', value: 'other-service' },
+      { name: 'Custom AI Voice Agents', value: 'voice-agents' },
+      { name: 'Enterprise Web Development', value: 'web-dev' },
+      { name: 'CRM & ERP Management', value: 'crm-erp' },
+      { name: 'Data Management Panels', value: 'data-panels' },
+      { name: 'Full Digital Transformation', value: 'full-transform' },
     ],
     formKey: '_service',
   },
   {
-    title: 'What is your budget category?',
+    title: 'Project Investment Scale',
     classes: '',
     radioArray: [
-      { name: '$2000 - $4000', value: '2-4' },
-      { name: '$4000 - $8000', value: '4-8' },
-      { name: '$8000 - $10000', value: '8-10' },
-      { name: '$10000', value: '10+' },
+      { name: '$5,000 - $15,000', value: '5-15' },
+      { name: '$15,000 - $40,000', value: '15-40' },
+      { name: '$40,000 - $80,000', value: '40-80' },
+      { name: '$100,000+', value: '100+' },
     ],
     formKey: '_budget',
   },
   {
-    title: 'Approximately how many pages will your project have?',
+    title: 'Infrastructure Complexity',
     classes: 'mr-[2.25vw]',
     radioArray: [
-      { name: 'Less than 5', value: '<5' },
-      { name: '6-10', value: '6-10' },
-      { name: '11-20', value: '11-20' },
-      { name: '20+', value: '20+' },
+      { name: 'Streamlined (MVPs)', value: 'simple' },
+      { name: 'Standard Enterprise', value: 'standard' },
+      { name: 'High-Scale Distribution', value: 'complex' },
+      { name: 'Custom Architecture', value: 'custom' },
     ],
     formKey: '_pages',
   },
   {
-    title: 'How quickly do you need the project?',
+    title: 'Deployment Urgency',
     classes: '',
     radioArray: [
-      { name: 'As fast as possible', value: 'max-fast' },
-      { name: 'High priority ', value: 'high-prio ' },
-      { name: 'Regular time', value: 'regular' },
-      { name: 'Take your time ', value: 'take-your-time' },
+      { name: 'Accelerated (High Priority)', value: 'max-fast' },
+      { name: 'Standard (8-12 Weeks)', value: 'regular' },
+      { name: 'Strategic (Ongoing)', value: 'strategic' },
     ],
     formKey: '_quickness',
   },

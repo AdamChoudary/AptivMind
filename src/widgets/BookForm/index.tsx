@@ -20,47 +20,52 @@ const Index: FC<Props> = () => {
   }
 
   return (
-    <div className="mx-auto max-w-[70vw] md:max-w-[85vw] px-[4vw] ">
-      <div className="relative">
+    <div className="mx-auto max-w-[70vw] md:max-w-[90vw] px-[4vw] ">
+      <div className="relative flex items-center justify-center mb-[4vw] md:mb-[6vw]">
         <button
-          className=" group absolute left-0 top-[25%] z-10 box-content rounded-full bg-stone-800 p-[0.5vw] hover:bg-stone-800"
+          className="group absolute left-0 p-[0.8vw] transition-all duration-300 hover:translate-x-[-0.5vw]"
           onClick={() => push('/')}
+          title="Back to Home"
         >
           <svg
             focusable="false"
-            className="h-[1.5vw] w-[1.5vw] md:h-[2.25vw] md:w-[2.25vw] fill-stone-400 transition group-hover:fill-stone-300"
+            className="h-[2vw] w-[2vw] md:h-[5vw] md:w-[5vw] fill-primary/40 group-hover:fill-primary transition-colors"
             viewBox="0 0 24 24"
           >
             <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"></path>
           </svg>
         </button>
-        <h1 className="mb-[1.75vw] md:text-[4.6vw] md:mb-[2.25vw] text-center text-[3.5vw] font-bold leading-[100%]">Request form</h1>
+        <h1 className="text-[4vw] md:text-[8vw] font-outfit font-black tracking-tighter text-text-1">
+          PROJECT REQUEST
+        </h1>
       </div>
       <form className="flex h-full flex-col items-center" onSubmit={handleSubmit}>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap w-full">
           {RADIO_FIELDS.map((item) => (
             <RadioGroup
               onValueChange={(value) => setForm((prev) => ({ ...prev, [item.formKey]: value }))}
               key={item.title}
-              className={`mb-[1.75vw] inline-block w-[calc(50%-1.75vw)] ${item.classes}`}
+              className={`mb-[3vw] inline-block w-[calc(50%-1.75vw)] md:w-full ${item.classes}`}
               required={true}
             >
-              <h4 className="mb-[0.2vw] md:mb-[0.5vw] text-[1.3vw] md:text-[1.6vw] font-medium">{item.title}</h4>
-              {item.radioArray.map((radio) => (
-                <div key={radio.value} className="flex items-center space-x-[0.65vw] md:space-x-[1vw] md:space-y-[0.3vw] font-[400]">
-                  <RadioGroupItem value={radio.value} id={radio.name} required={true} />
-                  <label htmlFor={radio.name} className="text-[1vw] md:text-[1.25vw] leading-[1.75vw]">
-                    {radio.name}
-                  </label>
-                </div>
-              ))}
+              <h4 className="mb-[1.2vw] md:mb-[2vw] text-[1.4vw] md:text-[3.5vw] font-outfit font-bold text-text-1/80 uppercase tracking-widest">{item.title}</h4>
+              <div className="flex flex-col gap-[0.8vw] md:gap-[2vw]">
+                {item.radioArray.map((radio) => (
+                  <div key={radio.value} className="flex items-center space-x-[1vw] group cursor-pointer">
+                    <RadioGroupItem value={radio.value} id={radio.name} required={true} className="border-primary/30 text-primary focus:ring-primary" />
+                    <label htmlFor={radio.name} className="text-[1.1vw] md:text-[3vw] font-inter font-light text-text-1/60 group-hover:text-primary transition-colors cursor-pointer">
+                      {radio.name}
+                    </label>
+                  </div>
+                ))}
+              </div>
             </RadioGroup>
           ))}
 
-          <div className="w-full space-y-[2vw] text-[1.1vw]">
+          <div className="w-full space-y-[2.5vw] mt-[2vw]">
             {INPUT_FIELDS.map((item) => (
               <div key={item.label} className={`w-full ${item.classes}`}>
-                <label htmlFor={item.label} className="leading-[1.5] mb-[0.4vw] text-[1.2vw] md:text-[1.5vw] inline-block">
+                <label htmlFor={item.label} className="font-outfit font-medium uppercase tracking-[0.2em] mb-[0.8vw] text-[1vw] md:text-[2.5vw] text-text-1/40 block">
                   {item.label}
                 </label>
                 <input
@@ -68,14 +73,15 @@ const Index: FC<Props> = () => {
                   type={item.type || 'text'}
                   name={item.name}
                   id={item.label}
-                  className="h-[3vw] md:h-[4vw] w-full appearance-none rounded-[0.25vw] border-[0.125vw] border-primary/80 bg-transparent px-[1vw] py-[0.8vw]"
+                  placeholder={item.label}
+                  className="h-[3.5vw] md:h-[10vw] w-full appearance-none rounded-none border-b border-stroke/30 bg-transparent px-0 py-[0.8vw] text-[1.2vw] md:text-[3vw] font-inter focus:border-primary focus:outline-none transition-colors placeholder:text-text-1/10"
                   required={item.required}
                 />
               </div>
             ))}
             <div className="w-full">
-              <label className="leading-[1.5] mb-[0.4vw] text-[1.2vw] md:text-[1.5vw] inline-block" htmlFor="message">
-                Tell us about your project
+              <label className="font-outfit font-medium uppercase tracking-[0.2em] mb-[0.8vw] text-[1vw] md:text-[2.5vw] text-text-1/40 block" htmlFor="message">
+                Project Vision & Details
               </label>
               <textarea
                 minLength={20}
@@ -83,17 +89,20 @@ const Index: FC<Props> = () => {
                 onChange={({ target: { name, value } }) => setForm((prev) => ({ ...prev, [name]: value }))}
                 id="message"
                 name="message"
-                className="min-h-[10vw] w-full resize-none border-[0.125vw] rounded-[0.125vw] text-[1.2vw] md:text-[1.5vw] border-primary/80 bg-transparent px-[0.8vw] py-[0.6vw]"
+                placeholder="Briefly describe your objectives..."
+                className="min-h-[12vw] md:min-h-[25vw] w-full resize-none border-b border-stroke/30 bg-transparent px-0 py-[1vw] text-[1.2vw] md:text-[3vw] font-inter focus:border-primary focus:outline-none transition-colors placeholder:text-text-1/10"
               />
             </div>
           </div>
 
-          <Button
-            title="Submit"
-            type="submit"
-            classes="py-[1.2vw] px-[5vw] md:py-[1.6vw] md:px-[8vw] text-[1.1vw] md:text-[1.5vw] bg-bg-1/90 hover:bg-bg-1/80"
-            btnClasses="p-[0.2vw] md:p-[0.25vw] capitalize self-start mt-[2.5vw]"
-          />
+          <div className="w-full flex justify-center mt-[4vw] pb-[6vw]">
+            <Button
+              title="TRANSMIT REQUEST"
+              type="submit"
+              classes="py-[1.2vw] px-[6vw] md:py-[3vw] md:px-[12vw] text-[1.2vw] md:text-[3vw] font-outfit font-black tracking-[0.3em] bg-primary text-bg-1 hover:bg-white transition-all duration-500 rounded-full shadow-2xl"
+              btnClasses=""
+            />
+          </div>
         </div>
       </form>
     </div>

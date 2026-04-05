@@ -4,7 +4,7 @@ const initCursor = () => {
   resizeCanvas();
 
   let config = {
-    SIM_RESOLUTION: 128,
+    SIM_RESOLUTION: 64,
     DYE_RESOLUTION: 1440,
     CAPTURE_RESOLUTION: 512,
 
@@ -1074,11 +1074,13 @@ const initCursor = () => {
   }
 
   function generateColor() {
-    let c = HSVtoRGB(Math.random(), 1.0, 1.0);
-    c.r *= 0.15;
-    c.g *= 0.15;
-    c.b *= 0.15;
-    return c;
+    // Cycle between Champagne (#B39F84) and Midnight Blue (#16233B)
+    const isChampagne = Math.random() > 0.5;
+    if (isChampagne) {
+      return { r: 0.7 * 0.2, g: 0.62 * 0.2, b: 0.52 * 0.2 };
+    } else {
+      return { r: 0.09 * 0.3, g: 0.14 * 0.3, b: 0.23 * 0.3 };
+    }
   }
 
   function HSVtoRGB(h, s, v) {

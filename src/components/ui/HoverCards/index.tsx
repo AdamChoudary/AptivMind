@@ -13,11 +13,11 @@ const Index: FC<Props> = ({ cards, itemClasses, wrapperClasses }) => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <div className={cn('grid md:grid-cols-2 ', itemClasses)}>
+    <div className={cn('grid md:grid-cols-2 gap-4', itemClasses)}>
       {cards.map((card, idx) => (
         <div
           key={idx}
-          className={cn('relative flex flex-col px-[0.4vw] md:px-[0.6vw] md:py-[0.5vw] py-[0.3vw] last:col-span-2 md:col-span-2', itemClasses)}
+          className={cn('relative flex flex-col p-[1vw] md:p-[2vw] last:col-span-2 md:col-span-2 group', itemClasses)}
           onMouseEnter={() => setHoveredIdx(idx)}
           onMouseLeave={() => setHoveredIdx(null)}
         >
@@ -25,32 +25,38 @@ const Index: FC<Props> = ({ cards, itemClasses, wrapperClasses }) => {
             {hoveredIdx === idx && (
               <motion.span
                 className={cn(
-                  'absolute inset-0 z-0 block h-full w-full rounded-[1.333vw] bg-stroke/50',
+                  'absolute inset-0 z-0 block h-full w-full rounded-2xl bg-onyx/40 border border-primary/20 backdrop-blur-sm',
                   wrapperClasses,
                 )}
                 layoutId="cardHoverEffect"
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{
                   opacity: 1,
-                  transition: { duration: 0.15 },
+                  scale: 1,
+                  transition: { duration: 0.2 },
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.1, delay: 0.2 },
+                  scale: 0.95,
+                  transition: { duration: 0.2 },
                 }}
               />
             )}
           </AnimatePresence>
           <div
             className={cn(
-              'z-[1] h-full min-w-[18vw] space-y-[1.2vw] rounded-[1vw] border-[0.2vw] border-stroke px-[1.4vw] py-[1.6vw] md:min-w-full',
+              'z-[1] h-full flex flex-col gap-[1.5vw] md:gap-[3vw] rounded-2xl border border-stroke/20 px-[2.5vw] py-[3vw] transition-all duration-500 group-hover:border-primary/30 bg-bg-2/30',
             )}
           >
-            <div className="flex items-center space-x-[0.6vw]">
-              {<card.icon />}
-              <h6 className="text-[1.6vw] md:text-[3.5vw] md:tracking-tight">{card.title}</h6>
+            <div className="flex items-center gap-[1.2vw] md:gap-[2vw]">
+              <div className="text-primary scale-125 md:scale-150 transition-transform duration-500 group-hover:scale-110">
+                <card.icon />
+              </div>
+              <h6 className="text-[1.8vw] md:text-[4vw] font-outfit font-bold tracking-tight text-text-1">{card.title}</h6>
             </div>
-            <p className="text-[1vw] md:text-[2.25vw] font-light leading-[1.5] md:leading-[1.2] md:tracking-tight">{card.description}</p>
+            <p className="text-[1.1vw] md:text-[2.8vw] font-inter font-light leading-[1.6] text-text-1/70 group-hover:text-text-1 transition-colors duration-500">
+              {card.description}
+            </p>
           </div>
         </div>
       ))}
