@@ -33,8 +33,11 @@ const Index: FC<Props> = () => {
           <div className={`burger ${isActive && 'burgerActive'}`}></div>
         </button>
       </div>
-      <button title="AptivMind" className="p-[3vw] fixed z-[100] top-0 left-0 group">
-        <LogoIcon className="w-[6vw] h-[6vw] md:w-[15vw] md:h-[15vw] group-hover:scale-105 transition-transform duration-500" />
+      <button 
+        title="AptivMind" 
+        className="p-[1.5vw] md:p-[4vw] fixed z-[100] top-[1.5vw] left-[1.5vw] group rounded-2xl overflow-hidden transition-all duration-500 hover:bg-primary/[0.05] hover:shadow-[0_0_50px_-15px_rgba(179,159,132,0.15)]"
+      >
+        <LogoIcon className="w-[10vw] h-[5vw] md:w-[25vw] md:h-[12vw] group-hover:scale-[1.03] transition-transform duration-700" />
       </button>
       <AnimatePresence mode="wait">
         {isActive && <SidebarMenu close={closeSidebar} />}

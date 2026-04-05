@@ -52,6 +52,18 @@ const Hero = () => {
         <div ref={ref3} className={`absolute left-0 top-0 h-full w-full `}>
           <Image src={main_3} fill={true} alt="" objectFit="cover" />
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          style={{ opacity }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 0.4, y: 0 }}
+          transition={{ delay: 2, duration: 1 }}
+          className="absolute bottom-[2vw] md:bottom-[10vw] flex flex-col items-center gap-[0.5vw] md:gap-[1.5vw] pointer-events-none"
+        >
+          <span className="text-[0.7vw] md:text-[2vw] font-outfit font-medium tracking-[0.4em] uppercase text-primary/60 italic">Scroll</span>
+          <div className="h-[3vw] w-[1px] bg-gradient-to-b from-primary/60 to-transparent animate-pulse" />
+        </motion.div>
       </div>
     </section>
   );

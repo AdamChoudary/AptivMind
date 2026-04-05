@@ -28,13 +28,13 @@ const Index: FC<Props> = ({ card: { title, services, description, number, classe
 
       <div className={`flex gap-[4vw] md:flex-col md:gap-0 pt-[3vw] border-t border-stroke/30 ${classes}`}>
         <div className="flex-1">
-          <div className="grid grid-cols-1 gap-[1.5vw] md:gap-[3vw]">
+          <div className="grid grid-cols-1 gap-[2vw] md:gap-[4vw]">
             {services.map((group: string[], i: number) => (
-              <ul key={i} className="flex flex-wrap gap-[2vw] md:gap-[4vw]">
+              <ul key={i} className="flex flex-wrap gap-[3vw] md:gap-[5vw]">
                 {group.map((s) => (
                   <li key={s} className="flex items-center gap-[0.8vw] group">
-                    <div className="h-[1vw] w-[1vw] md:h-[2vw] md:w-[2vw] rounded-full border border-moss-green/50 group-hover:bg-moss-green transition-colors duration-300"></div>
-                    <p className="text-[1.3vw] md:text-[2.8vw] font-inter font-semibold text-text-1 items-center">{s}</p>
+                    <div className="h-[0.8vw] w-[0.8vw] md:h-[1.5vw] md:w-[1.5vw] rounded-full border border-primary/40 group-hover:bg-primary transition-all duration-300"></div>
+                    <p className="text-[1.2vw] md:text-[2.8vw] font-inter font-medium text-text-1 items-center uppercase tracking-wider">{s}</p>
                   </li>
                 ))}
               </ul>
@@ -43,7 +43,7 @@ const Index: FC<Props> = ({ card: { title, services, description, number, classe
         </div>
 
         <div className="relative flex-[1.2] pt-[0.5vw]">
-          <p className="relative z-10 text-[1.4vw] md:text-[3vw] font-inter font-light leading-[1.7] text-text-1/90 md:mt-[4vw]">
+          <p className="relative z-10 text-[1.4vw] md:text-[3.2vw] font-inter font-light leading-[1.8] text-text-1/70 md:mt-[6vw]">
             {description}
           </p>
           <div className="absolute -right-[2vw] -top-[4vw] z-0 select-none pointer-events-none opacity-[0.03] text-[18vw] font-outfit font-black text-primary">
