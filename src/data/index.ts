@@ -72,29 +72,34 @@ export const CARDS = [
 
 export const APPROACH_CARDS = [
   {
+    number: '01',
     icon: First,
     title: 'Strategic Consultation',
     description:
       'We begin by deeply analyzing your business workflows and objectives. Our experts listen to your vision to architect a roadmap that ensures technical feasibility and high ROI.',
   },
   {
+    number: '02',
     icon: Second,
     title: 'Architectural Blueprint',
     description:
       'Following strategy, we develop comprehensive designs and system architectures. We conduct intensive reviews with your stakeholders to ensure the solution aligns perfectly with your goals.',
   },
   {
+    number: '03',
     icon: Third,
     title: 'Precision Development',
     description: 'Our elite engineering team proceeds to build your autonomous systems or platforms, focusing on scalability, security, and peak performance using modern technology stacks.',
   },
   {
+    number: '04',
     icon: Fourth,
     title: 'Rigorous Optimization',
     description:
       'Execution is followed by multi-layered testing. We Stress-test every component for reliability before initiating user-acceptance cycles to ensure a flawless deployment.',
   },
   {
+    number: '05',
     icon: Fifth,
     title: 'Scale & Maintenance',
     description:
