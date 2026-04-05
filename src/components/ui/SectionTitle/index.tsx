@@ -6,9 +6,16 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HT
 }
 
 const Index: FC<Props> = ({ title, classes, ...props }) => {
+  const baseTitle = title.endsWith('.') ? title.slice(0, -1) : title;
+  const hasDot = title.endsWith('.');
+
   return (
-    <h3 className={`text-[7.5vw] font-extrabold leading-[100%] md:text-[9vw] md:text-center ${classes}`} {...props}>
-      {title}
+    <h3 
+      className={`text-[8vw] md:text-[12vw] font-outfit font-black leading-none tracking-tighter text-text-1 md:text-center ${classes}`} 
+      {...props}
+    >
+      {baseTitle}
+      {hasDot && <span className="text-primary">.</span>}
     </h3>
   );
 };

@@ -1074,13 +1074,27 @@ const initCursor = () => {
   }
 
   function generateColor() {
-    // Cycle between Champagne (#B39F84) and Midnight Blue (#16233B)
-    const isChampagne = Math.random() > 0.5;
-    if (isChampagne) {
-      return { r: 0.7 * 0.2, g: 0.62 * 0.2, b: 0.52 * 0.2 };
-    } else {
-      return { r: 0.09 * 0.3, g: 0.14 * 0.3, b: 0.23 * 0.3 };
-    }
+    // Organically cycle through the AptivMind theme colors
+    // Theme RGB values (normalized 0-1)
+    const activePalette = [
+      { r: 0.70, g: 0.62, b: 0.52 }, // Champagne
+      { r: 0.09, g: 0.14, b: 0.23 }, // Midnight Blue
+      { r: 0.29, g: 0.36, b: 0.14 }, // Moss Green
+      { r: 0.43, g: 0.15, b: 0.19 }  // Burgundy
+    ];
+
+    // Use a time-based index to pick colors for a "moving" feel
+    const t = (Date.now() / 2000) % activePalette.length;
+    const i = Math.floor(t);
+    const j = (i + 1) % activePalette.length;
+    const f = t - i;
+
+    // Linear interpolation between colors in the palette
+    const r = (activePalette[i].r * (1 - f) + activePalette[j].r * f) * 0.15;
+    const g = (activePalette[i].g * (1 - f) + activePalette[j].g * f) * 0.15;
+    const b = (activePalette[i].b * (1 - f) + activePalette[j].b * f) * 0.15;
+
+    return { r, g, b };
   }
 
   function HSVtoRGB(h, s, v) {
