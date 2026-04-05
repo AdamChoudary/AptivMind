@@ -34,42 +34,30 @@ const Hero = () => {
 
       <div
         onMouseMove={(e) => manageMouseMove(e)}
-        className="relative left-0 top-0 flex h-full w-full flex-col items-center justify-center overflow-hidden md:h-[80vh]"
+        className="relative left-0 top-0 flex h-full w-full flex-col items-center justify-center overflow-hidden"
       >
         <motion.h1
           ref={heading1}
-          className="relative z-20 mt-[-5vw] w-full text-center text-[5.5vw] md:text-[7vw] md:leading-[1.1] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-text-1 via-primary to-text-1 max-w-[95%] tracking-tighter"
+          className="relative z-20 w-full text-center text-[5.5vw] md:text-[8vw] md:leading-[1.1] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-text-1 via-primary to-text-1 max-w-[95%] tracking-tighter"
           style={{ opacity }}
         >
           ADVANCING INTELLIGENCE.<br />SCALING POSSIBILITIES.
         </motion.h1>
-        <motion.h2 ref={heading2} className="z-20 mt-4 text-[1.4vw] md:text-[2.5vw] font-light text-primary/80 tracking-[0.5em] uppercase" style={{ opacity }} >
+        <motion.h2 ref={heading2} className="z-20 mt-6 text-[1.4vw] md:text-[3vw] font-light text-primary/80 tracking-[0.5em] uppercase" style={{ opacity }} >
           Specialized AI & Digital Solutions Agency
         </motion.h2>
 
-        <div ref={ref1} className={`absolute left-0 top-0 z-10 h-full w-full`}>
+        <div ref={ref1} className="absolute left-0 top-0 z-10 h-full w-full pointer-events-none">
           <Image src={main_1} fill={true} alt="" className='' objectFit="cover" />
         </div>
 
-        <div ref={ref2} className={`absolute left-0 top-0 h-full w-full `}>
+        <div ref={ref2} className="absolute left-0 top-0 h-full w-full pointer-events-none">
           <Image src={main_2} fill={true} alt="" objectFit="cover" />
         </div>
 
-        <div ref={ref3} className={`absolute left-0 top-0 h-full w-full `}>
+        <div ref={ref3} className="absolute left-0 top-0 h-full w-full pointer-events-none">
           <Image src={main_3} fill={true} alt="" objectFit="cover" />
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div 
-          style={{ opacity }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 0.4, y: 0 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-[2vw] md:bottom-[10vw] flex flex-col items-center gap-[0.5vw] md:gap-[1.5vw] pointer-events-none"
-        >
-          <span className="text-[0.7vw] md:text-[2vw] font-outfit font-medium tracking-[0.4em] uppercase text-primary/60 italic">Scroll</span>
-          <div className="h-[3vw] w-[1px] bg-gradient-to-b from-primary/60 to-transparent animate-pulse" />
-        </motion.div>
       </div>
     </section>
   );
