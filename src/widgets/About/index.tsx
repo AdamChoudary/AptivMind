@@ -7,7 +7,7 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   return (
-    <section id="about" className="relative border-t border-stroke/10 bg-bg-1 py-[12vw] md:py-[18vw] z-0 overflow-hidden">
+    <section id="about" className="relative border-t border-stroke/10 bg-bg-1 py-[8vw] md:py-[12vw] z-0 overflow-hidden">
       <SectionOpacity classes="relative z-10 px-[10vw] md:px-[5vw]">
         <div className="flex flex-col gap-[4vw] md:gap-[8vw]">
           <SectionTitle title="ABOUT." classes="text-left md:text-left" />
