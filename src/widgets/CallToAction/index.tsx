@@ -26,7 +26,7 @@ const Index: FC<Props> = () => {
         <Button
           onClick={handleFormToggle}
           title="START YOUR PROJECT"
-          classes="mt-[3vw] px-[3vw] py-[1.2vw] md:w-[60vw] rounded-full border border-primary/30 bg-bg-2 hover:bg-primary hover:text-bg-1 transition-all duration-500 font-outfit font-bold tracking-widest text-[1.2vw] md:text-[3vw]"
+          classes="mt-[1.5vw] px-[4vw] py-[1.2vw] md:w-[70vw] rounded-full border border-primary/20 bg-bg-2 shadow-2xl hover:bg-primary hover:text-bg-1 transition-all duration-700 font-outfit font-black tracking-[0.3em] text-[1vw] md:text-[3vw]"
           btnClasses=""
         />
       </div>
