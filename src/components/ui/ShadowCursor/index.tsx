@@ -12,7 +12,7 @@ const Index: FC<Props> = () => {
     initCursor();
   }, [])
   return (
-    <div className='h-screen w-full fixed top-0 left-0 z-[-1] '>
+    <div className='h-screen w-full fixed top-0 left-0 z-[9999] pointer-events-none'>
       <canvas id="fluid" className='w-full h-full' />
     </div>
   );

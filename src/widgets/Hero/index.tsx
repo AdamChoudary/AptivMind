@@ -27,11 +27,6 @@ const Hero = () => {
 
   return (
     <section id="main" className="relative h-screen w-full overflow-hidden bg-[radial-gradient(circle_at_center,var(--midnight-blue)_0%,var(--onyx)_100%)]">
-      {/* Creative Aurora Layer */}
-      <div className="absolute inset-x-0 top-0 h-[80vh] w-full pointer-events-none opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-t from-midnight-blue via-transparent to-transparent animate-aurora mix-blend-screen" />
-      </div>
-
       <div
         onMouseMove={(e) => manageMouseMove(e)}
         className="relative left-0 top-0 flex h-full w-full flex-col items-center justify-center overflow-hidden"

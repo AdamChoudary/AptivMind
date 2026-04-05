@@ -1089,10 +1089,10 @@ const initCursor = () => {
     const j = (i + 1) % activePalette.length;
     const f = t - i;
 
-    // Linear interpolation between colors in the palette
-    const r = (activePalette[i].r * (1 - f) + activePalette[j].r * f) * 0.15;
-    const g = (activePalette[i].g * (1 - f) + activePalette[j].g * f) * 0.15;
-    const b = (activePalette[i].b * (1 - f) + activePalette[j].b * f) * 0.15;
+    // Linear interpolation between colors in the palette with full vibrancy
+    const r = (activePalette[i].r * (1 - f) + activePalette[j].r * f) * 1.0;
+    const g = (activePalette[i].g * (1 - f) + activePalette[j].g * f) * 1.0;
+    const b = (activePalette[i].b * (1 - f) + activePalette[j].b * f) * 1.0;
 
     return { r, g, b };
   }

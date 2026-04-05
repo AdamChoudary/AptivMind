@@ -10,10 +10,10 @@ interface Props {}
 const Index: FC<Props> = () => {
   return (
     <section id="services" className="relative border-t border-stroke/10 py-[12vw] md:py-[18vw] overflow-hidden bg-bg-1">
-      {/* Creative Services Background Depth */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_0%,var(--burgundy)_0%,transparent_40%),radial-gradient(circle_at_0%_100%,var(--umber)_0%,transparent_40%)] opacity-[0.08]" />
+      {/* Refined Background Depth */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_0%,var(--burgundy)_0%,transparent_50%),radial-gradient(circle_at_0%_100%,var(--umber)_0%,transparent_50%)] opacity-[0.05]" />
       
-      <div className="relative z-10 px-[6vw] md:px-[3vw]">
+      <div className="relative z-10 px-[10vw] md:px-[5vw]">
         <SectionTitle title="SERVICES." classes="text-right pb-[8vw]" />
         
         <div className="flex flex-col">
