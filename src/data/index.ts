@@ -25,33 +25,47 @@ export const NAV_ITEMS = [
 
 export const CARDS = [
   {
-    title: 'Design',
+    title: 'Custom Voice Agents',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+      'Deploy intelligent, human-like AI voice agents capable of handling complex customer service queries, lead generation, and workflow automation efficiently and professionally.',
     services: [
-      ['Web app', 'Branding'],
-      ['Mobile app', 'Logo'],
+      ['AI Voice Chatbots', 'Workflow Automation'],
+      ['Lead Generation', 'Custom Integration'],
     ],
     number: '01.',
     classes: '',
   },
   {
-    title: 'Fullstack development',
+    title: 'WebSites Development Services',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+      'Build robust, fast, and elegantly designed websites tailored for your specific business needs. We blend beautiful aesthetics with modern technologies to deliver high-performance solutions.',
     services: [
-      ['Online shop', 'Web application'],
-      ['CMS', 'API Development'],
+      ['UI/UX Design', 'Full-Stack Apps'],
+      ['Landing Pages', 'E-commerce'],
     ],
     number: '02.',
     classes: 'border-t border-gray-1/50',
   },
   {
-    title: 'Mobile development',
+    title: 'CRM & ERP System Management',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
-    services: [['Android', 'IOS']],
+      'Streamline your business operations through specialized CRM and ERP management services, ensuring your data pipelines, sales funnels, and enterprise resource planning software run synchronously and autonomously.',
+    services: [
+      ['System Audits', 'Sales Tracking'],
+      ['ERP Integration', 'Automation'],
+    ],
     number: '03.',
+    classes: 'border-t border-gray-1/50',
+  },
+  {
+    title: 'Webdata Management Panels',
+    description:
+      'Establish sophisticated data management panels and dashboards to oversee analytics and operations comprehensively from one unified hub.',
+    services: [
+      ['Dashboard UI', 'Data Pipelines'],
+      ['Analytics Tools', 'Data Scraping'],
+    ],
+    number: '04.',
     classes: 'border-t border-gray-1/50',
   },
 ];

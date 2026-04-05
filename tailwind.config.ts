@@ -10,15 +10,22 @@ module.exports = {
         md: { max: '600px' },
       },
       colors: {
-        primary: '#CCC2DC',
-        'bg-1': '#141218',
-        'bg-2': '#211F26',
+        primary: '#B39F84', // Champagne
+        'bg-1': '#1A1A1A', // Charcoal base instead of deep space black
+        'bg-2': '#242424', // Lighter Charcoal for cards/elements
 
-        'text-1': '#E6E0E9',
+        'text-1': '#F4F1ED', // Soft off-white tailored to contrast the charcoal smoothly
 
-        'gray-1': '#303030',
+        'gray-1': '#3A3A3A',
 
-        stroke: '#4A4458',
+        stroke: '#424242',
+
+        // New thematic extensions
+        'moss-green': '#4A5D23',
+        'midnight-blue': '#16233B',
+        onyx: '#0C0C00',
+        umber: '#53453E',
+        burgundy: '#6E2530',
       },
 
       animation: {
