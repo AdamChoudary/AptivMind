@@ -60,10 +60,10 @@ const Index: FC<Props> = ({ cards, itemClasses, wrapperClasses }) => {
               <div className="text-primary scale-110 md:scale-125 transition-transform duration-700 group-hover:scale-125 group-hover:rotate-[5deg]">
                 <card.icon />
               </div>
-              <h6 className="text-[1.8vw] md:text-[4.5vw] font-outfit font-bold tracking-tight text-text-1">{card.title}</h6>
+              <h6 className="text-[1.6vw] md:text-[4.2vw] font-outfit font-bold tracking-tight text-text-1">{card.title}</h6>
             </div>
 
-            <p className="text-[1.1vw] md:text-[3.2vw] font-inter font-light leading-[1.6] text-text-1/50 group-hover:text-text-1/80 transition-colors duration-700 max-w-[90%]">
+            <p className="text-[0.9vw] md:text-[3vw] font-inter font-light leading-[1.6] text-text-1/50 group-hover:text-text-1/80 transition-colors duration-700 max-w-[90%]">
               {card.description}
             </p>
             

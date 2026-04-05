@@ -11,7 +11,7 @@ const Index: FC<Props> = ({ title, classes, ...props }) => {
 
   return (
     <h3 
-      className={`text-[8vw] md:text-[12vw] font-outfit font-black leading-none tracking-tighter text-text-1 md:text-center ${classes}`} 
+      className={`text-[5.5vw] md:text-[9vw] font-outfit font-black leading-none tracking-tighter text-text-1 md:text-center ${classes}`} 
       {...props}
     >
       {baseTitle}
