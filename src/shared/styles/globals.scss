@@ -60,6 +60,15 @@ a {
   .align-center {
     text-align: center;
   }
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.05] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+  }
+  .glass-premium {
+    @apply bg-[#242424]/40 backdrop-blur-2xl border border-primary/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)];
+  }
+  .transition-premium {
+    @apply transition-all duration-700 ease-premium;
+  }
 }
 
 //navigation

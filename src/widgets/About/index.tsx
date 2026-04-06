@@ -24,13 +24,13 @@ const Index: FC<Props> = () => {
               </p>
             </div>
 
-            <div className="relative h-[25vw] w-[35vw] md:h-[65vw] md:w-full group rounded-[3vw] border border-primary/10 overflow-hidden shadow-[0_0_100px_-30px_rgba(179,159,132,0.15)]">
+            <div className="relative h-[25vw] w-[35vw] md:h-[65vw] md:w-full group rounded-[2vw] overflow-hidden glass-premium transition-premium hover:shadow-primary/20">
               <img 
                 src="/images/hands_v2.jpg" 
                 alt="AptivMind Strategy" 
-                className="inline-block object-cover w-full h-full transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100" 
+                className="inline-block object-cover w-full h-full transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100 opacity-80 group-hover:opacity-100" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-1/40 via-transparent to-transparent opacity-50 group-hover:opacity-20 transition-opacity duration-1000"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-1/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-premium"></div>
             </div>
           </div>
         </div>

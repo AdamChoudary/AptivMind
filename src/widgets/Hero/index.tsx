@@ -33,13 +33,18 @@ const Hero = () => {
       >
         <motion.h1
           ref={heading1}
-          className="relative z-20 w-full text-center text-[5.5vw] md:text-[8vw] md:leading-[1.1] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-text-1 via-primary to-text-1 max-w-[95%] tracking-tighter"
+          className="relative z-20 w-full text-center text-[6vw] md:text-[9vw] md:leading-[1.05] font-black text-transparent bg-clip-text bg-gradient-to-b from-text-1 via-text-1 to-primary/50 max-w-[90%] tracking-[-0.04em] uppercase"
           style={{ opacity }}
         >
-          ADVANCING INTELLIGENCE.<br />SCALING POSSIBILITIES.
+          Advancing <span className="text-primary italic font-serif">Intelligence.</span><br />
+          Scaling <span className="text-primary/80">Possibilities.</span>
         </motion.h1>
-        <motion.h2 ref={heading2} className="z-20 mt-6 text-[1.4vw] md:text-[3vw] font-light text-primary/80 tracking-[0.5em] uppercase" style={{ opacity }} >
-          Specialized AI & Digital Solutions Agency
+        <motion.h2 
+          ref={heading2} 
+          className="z-20 mt-[2vw] md:mt-[4vw] text-[1.1vw] md:text-[2.8vw] font-inter font-light text-primary/60 tracking-[0.6em] uppercase flex items-center gap-[1.5vw] before:content-[''] before:w-[3vw] before:h-[1px] before:bg-primary/30 after:content-[''] after:w-[3vw] after:h-[1px] after:bg-primary/30" 
+          style={{ opacity }} 
+        >
+          Specialized AI & Digital Agency
         </motion.h2>
 
         <div ref={ref1} className="absolute left-0 top-0 z-10 h-full w-full pointer-events-none">

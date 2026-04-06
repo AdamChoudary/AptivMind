@@ -33,13 +33,34 @@ const Index: FC<Props> = () => {
         </div>
       </div>
 
-      <footer className="relative z-10 flex justify-between items-center border-t border-white/[0.05] px-[8vw] py-[3vw] text-[0.9vw] md:text-[2.5vw] font-outfit font-medium text-text-1/30 uppercase tracking-widest">
-        <div>© 2024 APTIVMIND. ALL RIGHTS RESERVED.</div>
-        <ul className="flex gap-[4vw]">
-          <li className="hover:text-primary transition-colors cursor-pointer">LinkedIn</li>
-          <li className="hover:text-primary transition-colors cursor-pointer">Twitter</li>
-          <li className="hover:text-primary transition-colors cursor-pointer">Contact</li>
-        </ul>
+      <footer className="relative z-10 flex justify-between items-center border-t border-white/[0.05] px-[8vw] py-[4vw] text-[0.85vw] md:text-[2.8vw] font-outfit font-medium text-text-1/40 uppercase tracking-[0.2em]">
+        <div className="flex flex-col gap-[0.5vw]">
+          <span className="text-text-1/20 font-light">© 2024 APTIVMIND.</span>
+          <span className="text-[0.7vw] md:text-[2.2vw] normal-case tracking-normal text-text-1/20">Crafting Intelligence, Scaling Success.</span>
+        </div>
+        
+        <div className="flex items-center gap-[6vw] md:gap-[4vw]">
+          <a 
+            href="https://www.instagram.com/aptivmind/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group flex items-center gap-[0.8vw] transition-all duration-500 hover:text-primary"
+          >
+            <span className="w-[1.2vw] h-[1.2vw] md:w-[4vw] md:h-[4vw] rounded-full border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-500">
+              <div className="w-[0.5vw] h-[0.5vw] bg-primary group-hover:bg-bg-1 rounded-full"></div>
+            </span>
+            INSTAGRAM
+          </a>
+          <a 
+            href="mailto:chaudhrayadam@gmail.com"
+            className="group flex items-center gap-[0.8vw] transition-all duration-500 hover:text-primary"
+          >
+            <span className="w-[1.2vw] h-[1.2vw] md:w-[4vw] md:h-[4vw] rounded-full border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-500">
+              <div className="w-[0.5vw] h-[0.5vw] bg-primary group-hover:bg-bg-1 rounded-full"></div>
+            </span>
+            GET IN TOUCH
+          </a>
+        </div>
       </footer>
     </SectionOpacity>
   );

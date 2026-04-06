@@ -3,7 +3,8 @@ import { FC, useEffect, useState } from 'react';
 
 import SidebarMenu from '@/components/SidebarMenu';
 import { AnimatePresence } from 'framer-motion';
-import { LogoIcon } from '@/icons/ApproachIcons/LogoIcon';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface Props {}
 
@@ -33,12 +34,22 @@ const Index: FC<Props> = () => {
           <div className={`burger ${isActive && 'burgerActive'}`}></div>
         </button>
       </div>
-      <button 
+      <Link 
+        href="/"
         title="AptivMind" 
-        className="p-[1.5vw] md:p-[4vw] fixed z-[100] top-[1.5vw] left-[1.5vw] group rounded-2xl overflow-hidden transition-all duration-500 hover:bg-primary/[0.05] hover:shadow-[0_0_50px_-15px_rgba(179,159,132,0.15)]"
+        className="fixed z-[100] top-[1.5vw] left-[1.5vw] group p-[1vw] rounded-2xl overflow-hidden transition-all duration-700 hover:bg-primary/[0.03] hover:shadow-[0_0_50px_-15px_rgba(179,159,132,0.1)]"
       >
-        <LogoIcon className="w-[10vw] h-[5vw] md:w-[25vw] md:h-[12vw] group-hover:scale-[1.03] transition-transform duration-700" />
-      </button>
+        <div className="relative w-[6vw] h-auto md:w-[20vw] flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)]">
+          <Image 
+            src="/logo.png" 
+            alt="AptivMind Logo" 
+            width={200}
+            height={150}
+            className="w-full h-auto object-contain filter transition-all duration-700"
+            priority
+          />
+        </div>
+      </Link>
       <AnimatePresence mode="wait">
         {isActive && <SidebarMenu close={closeSidebar} />}
       </AnimatePresence>
