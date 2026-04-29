@@ -19,7 +19,6 @@ export default function Home() {
       <CallToAction />
 
       {/* disable cursor here */}
-      <ShadowCursor />
     </>
   );
 }
